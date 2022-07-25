@@ -1,12 +1,13 @@
 import React from "react";
 import useStyles from "./styles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Typography, AppBar } from "@material-ui/core";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
+import decode from 'jwt-decode'
 
 const Navbar = () => {
   const classes = useStyles();
@@ -14,6 +15,7 @@ const Navbar = () => {
   const [ticker, setTicker] = useState("");
   const [msg, setMsg] = useState("");
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const location = useLocation()
 
   const handleSubmit = async () => {
     if (!ticker) setMsg("Enter a ticker !");
@@ -25,6 +27,21 @@ const Navbar = () => {
     setUser(null);
     navigate('/login')
   };
+
+  useEffect(() => {
+    if(user)
+    {
+      const token = user.token
+      if(token)
+      {
+        const decoded = decode(token)
+        if(decoded.exp * 1000 < new Date().getTime())
+        {
+          logout()
+        }
+      }
+    }
+  }, [location])
   return (
     <>
       {/* Navbar */}
