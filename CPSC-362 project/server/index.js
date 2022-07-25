@@ -15,7 +15,7 @@ app.use('/user', userRoutes)
 
 const PORT = process.env.PORT || 5000
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://admin:admin@cluster0.agfvl.mongodb.net/stocksportfolio?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(process.env.MONGODB_URI || 'enteryourownURL', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log('connected db')
 })
 
