@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getNews } from '../../actions/news'
 import Carousel from "better-react-carousel";
-import { Button, CircularProgress, Paper, Typography } from '@material-ui/core';
+import {  Paper } from '@material-ui/core';
 
 
 const News = () => {
