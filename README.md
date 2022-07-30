@@ -1,0 +1,31 @@
+CPSC362
+CLIENT FOLDERS DOCUMENTATIONS client
+--src
+----API (this is the API calls using axios)
+------index.js (fetch data from yahoo finance and user authenticate backend
+------news.js (fetch news data from bb finance)
+----actions (import api from API folder and return the data with specifics functions)
+------news.js (call api and return the data for news)
+------object.js (functions that call api from yahoo finance or from our back end mongodb for user authenticate)
+----Component (React components to render on pages like Navbar, StockInfos...)
+------Backtesting
+--------BackTestingCalculation.js (functions that calculate backtesting)
+--------BackTesingGraph.js (graph some backtesting data)
+--------BackTestingInfo.js (Display back testing data)
+------Graph
+--------Graph.js (Collect data for the graph)
+--------CreateChart (Use the data from Graph.js to render a chart UI)
+------Navbar
+--------Navbar.js (Render Navbar)
+--------style.js (styling the navbar)
+------News
+--------New.js (display market news on the screen)
+------StockInfo
+--------Stockinfo.js (display the open, bid, market price... of a stock) ----pages (pages to redirect to)
+------Home.js (main home page)
+------Login.js (Login page)
+------StockDetails.js (/quote/:id, display a stock details with graph)
+------styles.js (styling)
+----App.js (the main component to route to different pages)
+----index.js (this is the main class of React)
+----style.js (css in javascript to style the main component)
