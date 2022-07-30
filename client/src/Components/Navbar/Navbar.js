@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 import { useState, useEffect } from "react";
-import { Button, Typography, AppBar } from "@material-ui/core";
+import { Button, Typography, AppBar, Grid } from "@material-ui/core";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -70,6 +70,7 @@ const Navbar = () => {
         >
           <b>My Portfolio</b>
         </Typography>
+
         {msg && <Typography color="secondary">{msg}</Typography>}
         <div style={{ display: "flex", marginRight: "20px" }}>
           <FormControl fullWidth>
@@ -97,6 +98,7 @@ const Navbar = () => {
             Submit
           </Button>
         </div>
+        
         {!user ? (
           <Button
             variant="outlined"

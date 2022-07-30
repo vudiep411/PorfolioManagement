@@ -116,8 +116,6 @@ const StockDetails = () => {
                 <BackTestingInfo symbol={id}/>
               </div>
             </div>
-            {/* <BackTestingGraph symbol={id}/> */}
-            
           </div>
           
         </Container>

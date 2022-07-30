@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getNews } from '../../actions/news'
 import Carousel from "better-react-carousel";
-import {  Paper } from '@material-ui/core';
+import {  Grid, Paper } from '@material-ui/core';
 
 
 const News = () => {
@@ -24,21 +24,24 @@ const News = () => {
             {newsData.map((item, i) => {
                 return(
                     <Carousel.Item key={i}>
-                        <Paper style={{padding: '5px'}}>
-                            <div style={{display: 'flex'}}>
-                                <img src={item.thumbnailImage} alt='' style={{height: '200px', marginRight: '10px'}}></img>
-                                <a 
-                                style={{
-                                    maxWidth: '300px',
-                                    fontSize: '20px', 
-                                    textDecoration: 'none', 
-                                    color: 'Black',
-                                    textOverflow: 'ellipsis', 
-                                    overflow: 'hidden'}} href={item.longURL}>
-                                    {item.title}
-                                </a>
-                            </div>
-                        </Paper>
+                        <Grid container>
+                            <Paper style={{padding: '5px'}}>
+                                <Grid item xs={6}>
+                                    <img src={item.thumbnailImage} alt='' style={{height: '200px', marginRight: '10px'}}></img>
+                                </Grid>
+                                <Grid item xs={6} style={{maxWidth: '400px', textOverflow: 'ellipsis', overflow: 'hidden'}}>
+                                    <a 
+                                    style={{
+                                        fontSize: '20px', 
+                                        textDecoration: 'none', 
+                                        color: 'Black',
+                                        }} href={item.longURL}>
+                                        {item.title}
+                                    </a>
+                                </Grid>
+                            </Paper>
+                        </Grid>
+                        
                     </Carousel.Item>    
                 )
             })}
