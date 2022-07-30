@@ -13,7 +13,7 @@ export const fetchTrendingUS = () => axios.get('https://yfapi.net/v1/finance/tre
 export const fetchChart = (symbol, range, interval) => axios.get(`https://yfapi.net/v8/finance/chart/${symbol}?range=${range}&region=US&interval=${interval}&lang=en&events=div%2Csplit`, config) // 1 month
 
 
-const API = axios.create({ baseURL: 'http://localhost:5000'})
+const API = axios.create({ baseURL: 'https://stockporfolio.herokuapp.com/'})
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('profile'))
     {
