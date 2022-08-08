@@ -68,7 +68,7 @@ const BackTestingInfo = ({ symbol }) => {
       return (
         <div>
           <Typography>
-            <b>Annualized Return 1 year:</b> ${a1y}
+            <b>Annualized Balance 1 year:</b> ${a1y}
           </Typography>
         </div>
         )}
