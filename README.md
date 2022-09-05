@@ -16,7 +16,6 @@ A commercial portfolio management system requires numerous complex features to h
 ## About The Project
 
 <img src="portfolio.png" alt="img">
-<img src="client-structure.pdf">
 <br/>
 <br/>
 <p>Visit the fully deployed project</p>
