@@ -27,7 +27,7 @@ A commercial portfolio management system requires numerous complex features to h
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
 * [![express][express]][express-url]
 * [![Node.js][Node.js]][Node.js-url]
 * [![mongoDB][mongoDB]][mongodb-url]
